@@ -14,6 +14,9 @@ ts_project(
             "**/*.ts",
         ],
     ),
+    deps = [
+        "//packages/core/primitives/safari-jit-fix",
+    ],
 )
 
 tsec_test(

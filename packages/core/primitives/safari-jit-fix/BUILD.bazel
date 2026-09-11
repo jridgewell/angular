@@ -6,28 +6,16 @@ package(default_visibility = [
 ])
 
 ts_project(
-    name = "di",
+    name = "safari-jit-fix",
     srcs = glob(
         [
             "**/*.ts",
         ],
     ),
-    deps = [
-        "//packages/core/primitives/safari-jit-fix",
-    ],
 )
 
 tsec_test(
     name = "tsec_test",
-    target = ":di",
+    target = ":safari-jit-fix",
     tsconfig = "//packages/core:tsconfig_build",
-)
-
-filegroup(
-    name = "files_for_docgen",
-    srcs = glob([
-        "*.ts",
-        "src/**/*.ts",
-    ]),
-    visibility = ["//visibility:public"],
 )
